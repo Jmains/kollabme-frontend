@@ -26,13 +26,9 @@ import UniAudioPlayer from "./components/MediaPlayers/UniAudioPlayer";
  *  *********************************/
 
 // const uri = "http://localhost:8080/graphql";
-const uri = "/graphql";
-const expressUri = "/api";
+const uri = "https://kollab-me.herokuapp.com/graphql";
+const expressUri = "https://kollab-me.herokuapp.com/api";
 // const expressUri = "http://localhost:8080/api";
-// const uri = "https://intreecate-beta.herokuapp.com/graphql";
-// const expressUri = "https://intreecate-beta.herokuapp.com";
-// const uri = "https://intreecateserver.com/graphql";
-// const expressUri = "https://intreecateserver.com/api";
 
 function getAccessToken() {
   return localStorage.getItem("accessToken");

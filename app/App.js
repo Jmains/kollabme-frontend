@@ -55,7 +55,7 @@ const modalStyles = {
 import "./index.css";
 
 // TODO: Use environment variables
-const uri = "/api";
+const uri = "https://kollab-me.herokuapp.com/api";
 
 function App() {
   useEffect(() => {
