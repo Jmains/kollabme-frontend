@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @responsive {
+    .scrollbars-hidden::-webkit-scrollbar {
+      display: none;
+    }
+    .moz-scrollbars-hidden {
+      scrollbar-width: none;
+    }
+  }
+}
+
+.intreecateButton {
+  background: linear-gradient(180deg, #008c84 0%, #000000 100%), rgba(255, 255, 255, 0.16);
+  border-radius: 23px;
+}
+
+.intreecateSidebar {
+  background: linear-gradient(180deg, #000000 0%, #74f1f1 100%), #1a2239;
+  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.25);
+}
+
+.intreecateBackground {
+  background: radial-gradient(
+      41.67% 41.67% at 14.97% 34.91%,
+      #74f1f1 0%,
+      rgba(210, 244, 255, 0.212794) 66.74%,
+      rgba(255, 255, 255, 0) 97.61%
+    ),
+    #1c1c1c;
+}
+
+/* Loading Spinner */
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
