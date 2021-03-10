@@ -55,9 +55,8 @@ const modalStyles = {
 import "./index.css";
 
 // TODO: Use environment variables
-const uri = "http://localhost:8080/api";
-// const uri = "https://intreecate-beta.herokuapp.com";
-// const uri = "https://intreecateserver.com/api";
+const uri = "/api";
+
 function App() {
   useEffect(() => {
     ReactGa.initialize("UA-178445755-1");

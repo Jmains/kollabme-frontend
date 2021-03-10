@@ -25,8 +25,10 @@ import UniAudioPlayer from "./components/MediaPlayers/UniAudioPlayer";
  * //TODO: Use environment variables!
  *  *********************************/
 
-const uri = "http://localhost:8080/graphql";
-const expressUri = "http://localhost:8080/api";
+// const uri = "http://localhost:8080/graphql";
+const uri = "/graphql";
+const expressUri = "/api";
+// const expressUri = "http://localhost:8080/api";
 // const uri = "https://intreecate-beta.herokuapp.com/graphql";
 // const expressUri = "https://intreecate-beta.herokuapp.com";
 // const uri = "https://intreecateserver.com/graphql";
