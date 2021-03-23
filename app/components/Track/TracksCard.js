@@ -140,7 +140,8 @@ function TracksCard({ track, user, profileUsername, searchQuery, isPublic }) {
           <LoadingSpinner />
         </div>
       ) : (
-        <div className="flex relative items-center w-full bg-white p-1 my-1 shadow-md rounded-sm hover:bg-black hover:bg-opacity-25 transition duration-300 ease-in-out">
+        <div className="flex relative items-center w-full bg-white p-1 my-1 shadow-md rounded-sm hover:bg-black hover:bg-opacity-10 transition duration-300 ease-in-out">
+          {/* Image */}
           <Link to={`/${track.username}/tracks/${track.id}`} className="cursor-pointer">
             <img
               className="m-2 rounded-lg h-12 w-12 object-center object-cover shadow-md"
@@ -148,11 +149,13 @@ function TracksCard({ track, user, profileUsername, searchQuery, isPublic }) {
               alt="Track Image"
             />
           </Link>
+          {/* End Image */}
 
+          {/* Artist Name and track title */}
           <div className="ml-1">
             <Link
               to={`/${track.username}/tracks/${track.id}`}
-              className="block text-black w-24 sm:w-40 w text-xs sm:text-sm truncate font-extrabold tracking-wide hover:underline"
+              className="block text-gray-900 w-24 sm:w-40 w text-xs sm:text-sm truncate font-extrabold tracking-wide hover:underline"
             >
               {track.title}
             </Link>
@@ -163,18 +166,19 @@ function TracksCard({ track, user, profileUsername, searchQuery, isPublic }) {
               {track.artistName}
             </Link>
           </div>
+          {/* End Artist Name and track title */}
+
           {profileUsername && user && profileUsername === user.username && (
             <div className="mr-3 sm:ml-4 ml-2">
               <LockTrackButton user={user} track={track} />
             </div>
           )}
+
           <div className="flex items-center md:ml-0 focus:outline-none focus:shadow-outline">
             <LikeTrackButton user={user} track={track} />
           </div>
-          <div
-            aria-label="audio player"
-            className="absolute right-0 mr-8 md:w-56 sm:w-32 w-12"
-          >
+
+          <div aria-label="audio player" className="absolute right-0 mr-8 md:w-56 w-28">
             <ReactAudioPlayer audioSource={track.audioUrl} />
           </div>
 

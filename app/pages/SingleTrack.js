@@ -28,8 +28,8 @@ function SingleTrack() {
               alt="track image"
             />
 
-            <h1 className="text-gray-300 mt-2 font-bold truncate">{track.title}</h1>
-            <h2 className="text-gray-500 font-normal truncate">{track.artistName}</h2>
+            <h1 className="text-gray-50 mt-2 font-bold truncate">{track.title}</h1>
+            <h2 className="text-gray-400 font-normal truncate">{track.artistName}</h2>
 
             <div className="justify-center flex mt-2">
               <LikeTrackButton user={user} track={track} />

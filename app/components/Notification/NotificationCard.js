@@ -6,10 +6,7 @@ import { NavLink } from "react-router-dom";
 import Cross from "../icons/Cross";
 
 // types = comment , new follow, new collab,
-const postBg = {
-  background: "rgba(255, 255, 255, 0.07)",
-  mixBlendMode: "normal",
-};
+
 function NotificationCard({
   notifId,
   myId,
@@ -133,10 +130,7 @@ function NotificationCard({
   }
 
   return (
-    <div
-      style={postBg}
-      className="relative mt-3 w-full rounded-md p-3 hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out"
-    >
+    <div className="relative mt-3 w-full bg-white rounded-md p-3 hover:bg-black hover:bg-opacity-10 transition duration-300 ease-in-out">
       <div className="flex items-center">
         <div className="flex">
           <NavLink to={`/${username}`}>
@@ -148,9 +142,9 @@ function NotificationCard({
           </NavLink>
 
           <NavLink to={`/${username}`}>
-            <p className="ml-5 text-gray-500 text-sm md:text-base">{message}</p>
+            <p className="ml-5 text-gray-900 text-sm md:text-base">{message}</p>
 
-            <span className="block ml-5 text-gray-700 text-xs">
+            <span className="block ml-5 text-gray-600 text-xs">
               {moment(createdAt).fromNow()}
             </span>
           </NavLink>
@@ -159,7 +153,7 @@ function NotificationCard({
         {type && type === "NEW_LIKE" && (
           <NavLink
             to={`/${username}/posts/${postId}`}
-            className="hover:text-blue-300 text-blue-500 px-2 py-1 text-sm mx-5"
+            className="hover:underline text-blue-500 font-bold px-2 py-1 text-sm mx-5"
           >
             Go to post
           </NavLink>

@@ -140,7 +140,7 @@ function VideoCard({ video, user, profileUsername, searchQuery, isPublic }) {
           <LoadingSpinner />
         </div>
       ) : (
-        <div className=" relative px-6 md:max-h-48 bg-cardBg text-center content-center my-1 rounded-lg hover:bg-black hover:bg-opacity-50 py-2 mr-2 shadow-md transition duration-300 ease-in-out">
+        <div className=" relative px-6 bg-white text-center content-center my-1 rounded-lg hover:bg-black hover:bg-opacity-10 py-2 mr-2 shadow-md transition duration-300 ease-in-out">
           {/* <ModalImage
         className="mt-3 inline-block sm:h-48 sm:w-56 w-56 h-48 rounded-md object-center object-cover cursor-pointer shadow-lg"
         small={painting.imageUrl}
@@ -154,7 +154,7 @@ function VideoCard({ video, user, profileUsername, searchQuery, isPublic }) {
           {video.videoUrl && (
             <div
               style={playerWrapper}
-              className="block shadow-lg mx-auto border-gray-700 border rounded-md px-5 h-48 sm:h-64 w-full mt-2 focus:outline-none cursor-pointer"
+              className="block shadow-lg mx-auto border-gray-400 border rounded-md px-5 w-full mt-2 focus:outline-none cursor-pointer"
             >
               <VideoPlayer videoSource={video.videoUrl} />
             </div>
@@ -173,24 +173,24 @@ function VideoCard({ video, user, profileUsername, searchQuery, isPublic }) {
               </div>
             </div>
             <Link to="">
-              <h1 className="text-gray-400 text-xs sm:text-sm font-bold mt-2 cursor-pointer hover:underline w-40 mx-auto truncate">
+              <h1 className="text-gray-900 text-xs sm:text-sm font-bold mt-2 cursor-pointer hover:underline w-40 mx-auto truncate">
                 {video.title}
               </h1>
-              <p className="text-gray-600 text-xs sm:text-sm font-thin cursor-pointer w-40 mx-auto truncate">
+              <p className="text-gray-600 text-xs sm:text-sm cursor-pointer w-40 mx-auto truncate">
                 {video.description}
               </p>
             </Link>
             <Link to={`/${video.username}`}>
               <div className="flex justify-center items-center mx-auto w-40 mt-3">
                 <svg
-                  className="fill-current text-teal-400 -ml-3 h-6 w-6"
+                  className="fill-current text-gray-500 -ml-3 h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
-                <p className="text-teal-400 text-xs sm:text-sm cursor-pointer ml-1 truncate">
+                <p className="text-gray-500 text-xs sm:text-sm cursor-pointer ml-1 truncate">
                   {video.author.displayName}
                 </p>
               </div>

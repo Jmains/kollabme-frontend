@@ -60,12 +60,12 @@ function VideosContainer(props) {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center px-4">
         <h1
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-black font-bold text-base md:text-lg ml-2 focus:outline-none"
+          className="text-black font-bold text-base md:text-lg lg:text-3xl focus:outline-none"
         >
           Videos
         </h1>
@@ -78,7 +78,7 @@ function VideosContainer(props) {
             onChange={(e) => {
               setSearchQuery(e.target.value);
             }}
-            className="sm:w-72 w-40 text-xs sm:text-sm relative z-40 bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
+            className="sm:w-72 w-40 text-xs sm:text-sm relative bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
             type="text"
             name="search videos"
             id="searchVideos"
@@ -97,7 +97,7 @@ function VideosContainer(props) {
       </div>
 
       {videos && videos.length !== 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row mt-2 bg-pageBg rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-2 gay-y-2 grid-flow-row mt-2">
           {videos &&
             videos.map((video) => {
               return (

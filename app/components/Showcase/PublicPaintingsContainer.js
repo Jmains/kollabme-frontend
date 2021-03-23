@@ -62,12 +62,12 @@ function PublicPaintingsContainer(props) {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center px-4">
         <h1
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-black font-bold text-base md:text-lg ml-2 focus:outline-none"
+          className="text-black font-bold text-base md:text-lg lg:text-3xl focus:outline-none"
         >
           Gallery
         </h1>
@@ -96,7 +96,7 @@ function PublicPaintingsContainer(props) {
                 });
               }
             }}
-            className="sm:w-72 w-40 text-xs sm:text-sm relative z-40 bg-white  rounded-full h-8 pl-5 pr-10 py-1 text-gray-800 placeholder-gray-500 focus:outline-none"
+            className="sm:w-72 w-40 text-xs sm:text-sm relative bg-white  rounded-full h-8 pl-5 pr-10 py-1 text-gray-800 placeholder-gray-500 focus:outline-none"
             type="text"
             name="search gallery"
             id="searchGallery"

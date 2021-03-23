@@ -63,8 +63,8 @@ function PublicAlbumsContainer(props) {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
-        <h2 className="text-black font-bold text-base md:text-lg ml-2 focus:outline-none">
+      <div className="flex justify-between items-center px-4">
+        <h2 className="text-black font-bold text-base md:text-lg lg:text-3xl focus:outline-none">
           Albums
         </h2>
 
@@ -98,7 +98,7 @@ function PublicAlbumsContainer(props) {
                 });
               }
             }}
-            className="text-xs sm:text-sm sm:w-72 w-40 relative z-40 bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
+            className="text-xs sm:text-sm sm:w-72 w-40 relative bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
             type="text"
             name="search track"
             id="searchTrack"

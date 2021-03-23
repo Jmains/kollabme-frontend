@@ -41,7 +41,7 @@ function UserSearchBar() {
   }, [debouncedSearchTerm, data]);
 
   return (
-    <div className="relative p-1 rounded-md focus:outline-none ">
+    <div className="relative p-1 rounded-md  focus:outline-none ">
       <input
         aria-label="searchbar"
         autoComplete="off"
@@ -52,14 +52,14 @@ function UserSearchBar() {
         onChange={(e) => {
           setSearchQuery(e.target.value);
         }}
-        className="relative z-30 bg-white text-xs md:text-base rounded-full h-10 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 w-full focus:outline-none"
+        className="relative focus-within:fixed shadow-md focus-within:z-30 bg-white text-xs md:text-base rounded-full h-10 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-500 w-full focus:outline-none"
         type="text"
         name="search"
         id="search"
         placeholder="Search users..."
       />
       <svg
-        className="absolute z-30 h-6 w-6 fill-current mt-3 right-0 inset-y-0 text-gray-500 mr-4"
+        className="absolute z-30 h-6 w-6 fill-current mt-3 focus-within:z-30 focus-within:fixed right-0 inset-y-0 text-gray-500 mr-4"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -74,37 +74,39 @@ function UserSearchBar() {
             onClick={() => {
               setShowSearchList(false);
             }}
-            className="fixed inset-0 w-full z-30 cursor-default focus:outline-none bg-black bg-opacity-75"
+            className="fixed inset-0 w-full z-20 cursor-default focus:outline-none bg-black bg-opacity-75"
           ></button>
 
-          <div className="absolute inset-y-0 mt-12 h-64 z-40 overflow-y-auto w-full">
-            {data && users.length === 0 && (
-              <h1 className="relative h-16 pt-5 pl-2 text-gray-500 bg-cardBg rounded-md">
-                User(s) not found.
-              </h1>
-            )}
-            {data &&
-              users &&
-              users.length !== 0 &&
-              users.map((user, i) => {
-                return (
-                  <div key={user.node.id}>
-                    <UserContactCard user={user.node} />
+          {data && (
+            <div className="absolute inset-y-0 mt-12 z-30 h-64 overflow-y-auto w-full">
+              {data && users.length === 0 && (
+                <h1 className="relative h-16 pt-5 pl-2 text-gray-500 bg-cardBg rounded-md">
+                  User(s) not found.
+                </h1>
+              )}
+              {data &&
+                users &&
+                users.length !== 0 &&
+                users.map((user, i) => {
+                  return (
+                    <div key={user.node.id}>
+                      <UserContactCard user={user.node} />
 
-                    {/* When scrolling down do infinity scroll */}
-                    {data.getPaginatedUsers.pageInfo.hasNextPage && i === users.length - 3 && (
-                      <Waypoint
-                        onEnter={() => {
-                          fetchMore({
-                            variables: { after: endCursor },
-                          });
-                        }}
-                      />
-                    )}
-                  </div>
-                );
-              })}
-          </div>
+                      {/* When scrolling down do infinity scroll */}
+                      {data.getPaginatedUsers.pageInfo.hasNextPage && i === users.length - 3 && (
+                        <Waypoint
+                          onEnter={() => {
+                            fetchMore({
+                              variables: { after: endCursor },
+                            });
+                          }}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
+            </div>
+          )}
 
           {/* <div className="relative flex justify-center z-50 text-white text-xl">
             {networkStatus === 3 && <LoadingSpinner />}

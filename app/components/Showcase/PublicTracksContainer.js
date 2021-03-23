@@ -64,12 +64,12 @@ function PublicTracksContainer(props) {
 
   return (
     <div>
-      <div className="flex justify-between items-center mx-auto">
+      <div className="flex justify-between items-center mx-auto px-4">
         <h1
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-black font-bold text-base md:text-lg focus:outline-none"
+          className="text-black font-bold text-base md:text-lg lg:text-3xl focus:outline-none"
         >
           Tracks
         </h1>
@@ -126,9 +126,9 @@ function PublicTracksContainer(props) {
                 });
               }
             }}
-            className="text-xs sm:text-sm w-48 sm:w-72 relative z-40 bg-white rounded-full h-8 pl-3 pr-8 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
+            className="text-xs sm:text-sm w-48 sm:w-72 relative bg-white rounded-full h-8 pl-3 pr-8 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
             type="text"
-            name="search track"
+            name="search tracks"
             id="searchTrack"
             placeholder="Search tracks..."
           />
@@ -172,7 +172,7 @@ function PublicTracksContainer(props) {
       </div> */}
 
       {tracks && tracks.length !== 0 && (
-        <div ref={tracksContainerRef} className="mt-4 mx-auto rounded-lg max-w-3xl">
+        <div ref={tracksContainerRef} className="mt-4 mx-auto">
           {tracks &&
             tracks.map((track) => {
               return (

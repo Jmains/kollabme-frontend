@@ -58,7 +58,7 @@ const coverPhotoUploadIcon = (
 Modal.setAppElement("#app");
 const modalStyles = {
   content: {
-    top: "65%",
+    top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
@@ -67,6 +67,7 @@ const modalStyles = {
     transform: "translate(-50%, -50%)",
     background: "rgba(0,0,0,0)",
     border: "none",
+    overflowY: "scroll",
   },
   overlay: {
     zIndex: 999,
@@ -423,7 +424,7 @@ function Profile(props) {
       {/* Post button, Live Reel button, and post card container */}
       <div className="grid grid-cols-1 lg:grid-cols-12 max-w-6xl mx-auto">
         {/* Profile Info Card Container */}
-        <div className="col-span-1 lg:col-span-4 rounded-sm mx-auto mt-2 px-4">
+        <div className="col-span-1 lg:col-span-4 rounded-sm mx-auto w-full sm:w-3/4 lg:w-full mt-2 px-4">
           {profileData && (
             <ProfileInfo
               user={user}
@@ -468,8 +469,8 @@ function Profile(props) {
                       }}
                       className={
                         active === type
-                          ? "text-sm md:text-base font-semibold text-teal-400 w-auto px-3 py-1"
-                          : "text-sm md:text-base font-semibold text-gray-400 w-auto px-3 py-1  hover:text-teal-400 transition duration-300 ease-in-out"
+                          ? "text-sm md:text-base font-semibold text-gray-900 w-auto px-3 py-1 focus:outline-none focus:text-gray-900"
+                          : "text-sm md:text-base font-semibold text-gray-400 w-auto px-3 py-1 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-300 ease-in-out"
                       }
                     >
                       {type}
@@ -546,7 +547,6 @@ function Profile(props) {
           onRequestClose={handleModalClose}
           style={modalStyles}
           shouldCloseOnOverlayClick={false}
-          onAfterOpen={() => (document.body.style.overflow = "hidden")}
         >
           <EditProfileModal
             userId={profileData.id}

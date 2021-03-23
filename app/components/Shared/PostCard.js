@@ -5,17 +5,14 @@ import { NavLink } from "react-router-dom";
 import { useAuthState } from "../../context/auth";
 import LikeButton from "../Buttons/LikeButton";
 import CommentButton from "../Buttons/CommentButton";
-import ShareButton from "../Buttons/ShareButton";
 import VideoPlayer from "../MediaPlayers/VideoPlayer";
 import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 import ReactAudioPlayer from "../MediaPlayers/ReactAudioPlayer";
-import PostEmbeddedTrack from "./PostEmbeddedTrack";
 import { useMutation, gql } from "@apollo/client";
 import { QUERY_POSTS } from "../../utils/graphql";
 import lozad from "lozad";
 
 import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 import LoadingSpinner from "./LoadingSpinner";
 
 const playerWrapper = {
@@ -246,10 +243,6 @@ function PostCard({ post }) {
                     postId={post.id}
                     author={post.author.username}
                   />
-                </div>
-
-                <div className="md:text-base flex items-center text-gray-500 text-xs ml-8 focus:outline-none">
-                  <ShareButton />
                 </div>
 
                 <button

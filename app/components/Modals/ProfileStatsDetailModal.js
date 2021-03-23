@@ -53,7 +53,7 @@ function ProfileStatsDetailModal({ title, setModalIsOpen, query, type, username 
               ref={titleRef}
               tabIndex="0"
               id="title"
-              className="text-teal-400 text-xl font-bold tracking-wide m-2"
+              className="text-gray-50 text-xl font-bold tracking-wide m-2"
             >
               {title}
             </h1>
@@ -99,7 +99,7 @@ function ProfileStatsDetailModal({ title, setModalIsOpen, query, type, username 
                       alt="Profile picture"
                     />
                     <div className="ml-1">
-                      <h2 className="text-gray-400 font-semibold w-64 text-sm truncate">
+                      <h2 className="text-gray-50 font-semibold w-64 text-sm truncate">
                         {capitalizeFirstLetter(user.node.username)}
                       </h2>
                       <div className="flex pr-2">
@@ -109,7 +109,7 @@ function ProfileStatsDetailModal({ title, setModalIsOpen, query, type, username 
                               return (
                                 <>
                                   {mp && (
-                                    <p key={i} className="text-gray-600 font-normal text-xs">
+                                    <p key={i} className="text-gray-500 font-normal text-xs">
                                       {`${mp}`}
                                     </p>
                                   )}
@@ -119,7 +119,7 @@ function ProfileStatsDetailModal({ title, setModalIsOpen, query, type, username 
                               return (
                                 <>
                                   {mp && (
-                                    <p key={i} className="text-gray-600 font-normal text-xs">
+                                    <p key={i} className="text-gray-500 font-normal text-xs">
                                       {`${mp},\u00A0`}
                                     </p>
                                   )}

@@ -69,13 +69,13 @@ function Navbar() {
 
   const navbar = user ? (
     <nav className="shadow-lg sticky top-0 bg-black z-40">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-12 relative">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-10 relative">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
               onClick={handleDropdownClick}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none  transition duration-300 ease-in-out"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 focus:outline-none  transition duration-300 ease-in-out"
               aria-label="Main menu containing home, live reel, projects, and studio"
               aria-expanded={expanded}
             >
@@ -113,18 +113,23 @@ function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:justify-start">
             <div className="flex-shrink-0">
-              <h1 className="text-white font-bold text-xl w-auto ">KollabMe</h1>
+              <NavLink
+                to="/community"
+                className="text-white font-bold md:text-xl text-base w-auto"
+              >
+                KollabMe
+              </NavLink>
             </div>
 
             <div className="hidden sm:block sm:ml-6">
-              <div className="flex items-baseline">
+              <div className="flex items-baseline md:space-x-4">
                 <a className="sr-only" href="#profilepic">
                   Skip navigation
                 </a>
 
                 <NavLink
                   exact
-                  activeClassName="px-2 py-1 text-white"
+                  activeStyle={{ color: "#ffffff" }}
                   className="px-2 py-1 text-sm font-medium leading-5 text-gray-400 hover:text-white focus:outline-none transition duration-200 ease-in-out"
                   to="/"
                 >
@@ -132,7 +137,7 @@ function Navbar() {
                 </NavLink>
                 <NavLink
                   exact
-                  activeClassName="px-2 py-1 text-white"
+                  activeStyle={{ color: "#ffffff" }}
                   className="px-2 py-1 text-sm font-medium leading-5 text-gray-400 hover:text-white focus:outline-none transition duration-200 ease-in-out"
                   to="/projects"
                 >
@@ -140,19 +145,11 @@ function Navbar() {
                 </NavLink>
                 <NavLink
                   exact
-                  activeClassName="px-2 py-1 text-white"
+                  activeStyle={{ color: "#ffffff" }}
                   className="px-2 py-1 text-sm font-medium leading-5 text-gray-400 hover:text-white focus:outline-none transition duration-200 ease-in-out"
                   to="/community"
                 >
                   Community
-                </NavLink>
-                <NavLink
-                  exact
-                  activeClassName="px-2 py-1 text-white"
-                  className="px-2 py-1 text-sm font-medium leading-5 text-gray-400 hover:text-white focus:outline-none transition duration-200 ease-in-out"
-                  to="studio"
-                >
-                  Studio
                 </NavLink>
               </div>
             </div>
@@ -201,11 +198,11 @@ function Navbar() {
                       setShowProfileDropdown(false);
                       document.removeEventListener("keydown", handleEscape);
                     }}
-                    className="fixed inset-0 h-full w-full cursor-default focus:outline-none bg-black bg-opacity-25"
+                    className="fixed inset-0 h-full w-full cursor-default focus:outline-none bg-black bg-opacity-50"
                   ></button>
-                  <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg ">
+                  <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg z-40">
                     <div
-                      className="py-1 rounded-md bg-gray-300 shadow-xs"
+                      className="py-1 rounded-md bg-white shadow-xs"
                       role="user-menu"
                       aria-orientation="vertical"
                       aria-labelledby="user-menu"
@@ -216,7 +213,7 @@ function Navbar() {
                         ref={myProfileRef}
                         onClick={handleProfileDropdownItemClick}
                         to={`/${user.username}`}
-                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-cardBg hover:text-white focus:bg-cardBg focus:text-white transition duration-200 ease-in-out"
+                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-cardBg hover:text-white focus:bg-cardBg focus:text-white focus:outline-none transition duration-200 ease-in-out"
                         role="menuitem"
                       >
                         My Profile
@@ -224,7 +221,7 @@ function Navbar() {
                       <NavLink
                         onClick={handleProfileDropdownItemClick}
                         to="/settings"
-                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-cardBg hover:text-white focus:bg-cardBg focus:text-white transition duration-200 ease-in-out"
+                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-cardBg hover:text-white focus:bg-cardBg focus:text-white focus:outline-none transition duration-200 ease-in-out"
                         role="menuitem"
                       >
                         Settings
@@ -232,7 +229,7 @@ function Navbar() {
                       <NavLink
                         to="/"
                         onClick={logoutUser}
-                        className="block cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-cardBg hover:text-white focus:bg-cardBg focus:text-white transition duration-200 ease-in-out"
+                        className="block cursor-pointer px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-cardBg hover:text-white focus:bg-cardBg focus:text-white focus:outline-none transition duration-200 ease-in-out"
                         role="menuitem"
                       >
                         Sign out
@@ -259,13 +256,13 @@ function Navbar() {
               document.removeEventListener("keydown", handleEscape);
             }}
             aria-label="close menu"
-            className="fixed inset-0 h-full w-full z-20 cursor-default focus:outline-none"
+            className="fixed inset-0 h-full w-full bg-black bg-opacity-50 cursor-default focus:outline-none"
           ></button>
           <div id="mobileDropdown" aria-expanded={expanded} className="px-2 pt-2 pb-3">
             <NavLink
               exact
               onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
+              activeStyle={{ color: "#ffffff" }}
               className="mt-1 block relative px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
               to="/"
             >
@@ -274,7 +271,7 @@ function Navbar() {
             <NavLink
               exact
               onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
+              activeStyle={{ color: "#ffffff" }}
               className="mt-1 block relative px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
               to="/projects"
             >
@@ -283,20 +280,11 @@ function Navbar() {
             <NavLink
               exact
               onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
+              activeStyle={{ color: "#ffffff" }}
               className="mt-1 block relative px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
               to="/community"
             >
               Community
-            </NavLink>
-            <NavLink
-              exact
-              onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
-              className="mt-1 block relative px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
-              to="/studio"
-            >
-              Studio
             </NavLink>
           </div>
         </div>
@@ -350,13 +338,15 @@ function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:justify-start">
             <div className="flex-shrink-0">
-              <h1 className="text-white font-bold text-xl w-auto ">KollabMe</h1>
+              <NavLink to="/community" className="text-white font-bold text-xl w-auto ">
+                KollabMe
+              </NavLink>
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex">
                 <NavLink
                   exact
-                  activeClassName="px-2 py-1 text-white"
+                  activeStyle={{ color: "#ffffff" }}
                   className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-4 text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
                   to="/"
                 >
@@ -364,7 +354,7 @@ function Navbar() {
                 </NavLink>
                 <NavLink
                   exact
-                  activeClassName="px-2 py-1 text-white"
+                  activeStyle={{ color: "#ffffff" }}
                   className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-4 text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
                   to="/login"
                 >
@@ -378,28 +368,20 @@ function Navbar() {
                 >
                   Community
                 </NavLink>
-                <NavLink
-                  exact
-                  activeClassName="px-2 py-1 text-white"
-                  className="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-4 text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
-                  to="/studio"
-                >
-                  Studio
-                </NavLink>
               </div>
             </div>
           </div>
-          <div className="absolute top-0 mt-4 sm:mt-0 right-0 flex items-center pr-2 text-sm md:text-base sm:static sm:ml-2 sm:pr-0">
+          <div className="absolute top-0 mt-5 sm:mt-0 right-0 flex items-center text-xs sm:text-sm md:text-base sm:static sm:ml-2 sm:pr-0">
             <NavLink
               to="/signup"
-              className="cursor-pointer text-white h-auto font-medium rounded py-1 px-2 bg-gradient-to-r from-white to-gray-800 hover:bg-gradient-to-r hover:from-teal-300 hover:to-teal-600 focus:outline-none focus:border-2  focus:border-gray-700 transition duration-300 ease-out"
+              className="cursor-pointer h-auto font-medium rounded py-1 px-2 bg-gray-50 text-gray-900 hover:bg-opacity-60 focus:outline-none focus:ring-2 focus:ring-purple-600 transition duration-300 ease-out"
             >
               Sign Up
             </NavLink>
 
             <NavLink
               to="/login"
-              className="cursor-pointer text-white h-auto font-medium shadow-md py-1 px-2 ml-4 border border-gray-300 rounded hover:bg-teal-600 focus:border-2  focus:border-gray-700 focus:outline-none focus:text-gray-900 focus:bg-black transition duration-200 ease-out"
+              className="cursor-pointer text-white h-auto font-medium shadow-md py-1 px-2 ml-4 border border-gray-300 rounded hover:text-gray-900 hover:bg-white focus:outline-none focus:ring-2 focus:ring-purple-600 transition duration-200 ease-out"
             >
               Login
             </NavLink>
@@ -431,13 +413,13 @@ function Navbar() {
               document.removeEventListener("keydown", handleEscape);
             }}
             aria-label="close menu"
-            className="fixed inset-0 h-full w-full z-10 cursor-default focus:outline-none bg-red-500"
+            className="fixed inset-0 h-full w-full cursor-default focus:outline-none bg-black bg-opacity-50"
           ></button>
-          <div aria-expanded={expanded} className="px-2 pt-2 pb-3 ">
+          <div aria-expanded={expanded} className="px-2 pt-2 pb-3">
             <NavLink
               exact
               onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
+              activeStyle={{ color: "#ffffff" }}
               className="relative mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
               to="/"
             >
@@ -446,7 +428,7 @@ function Navbar() {
             <NavLink
               exact
               onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
+              activeStyle={{ color: "#ffffff" }}
               className="relative mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
               to="/login"
             >
@@ -455,20 +437,11 @@ function Navbar() {
             <NavLink
               exact
               onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
+              activeStyle={{ color: "#ffffff" }}
               className="relative mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
               to="/community"
             >
               Community
-            </NavLink>
-            <NavLink
-              exact
-              onClick={handleDropdownItemClick}
-              activeClassName="px-2 py-1 text-white"
-              className="relative mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-black focus:outline-none focus:text-white focus:bg-black transition duration-200 ease-in-out"
-              to="/studio"
-            >
-              Studio
             </NavLink>
           </div>
         </div>

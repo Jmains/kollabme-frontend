@@ -34,7 +34,7 @@ function CollaborateButton({ user, userToCollab }) {
         <button
           aria-label="uncollaborate"
           onClick={collabWithUser}
-          className="ml-3 py-1 px-3 text-xs md:text-sm text-gray-900 font-semibold bg-gradient-to-r from-teal-400 to-teal-700 bg-opacity-25 hover:bg-gradient-to-r hover:from-teal-700 hover:to-teal-900 hover:text-gray-900 rounded-full tracking-wide shadow-md border-b border-gray-700 transition ease-out duration-500"
+          className="ml-3 py-1 px-3 text-xs md:text-sm text-gray-900 font-semibold bg-white hover:bg-opacity-60 rounded-full tracking-wide shadow-md border-b border-gray-700 transition ease-out duration-500"
         >
           Uncollab
         </button>
@@ -43,7 +43,7 @@ function CollaborateButton({ user, userToCollab }) {
       collabButton = (
         <button
           aria-label="collaboration request pending"
-          className="ml-3 py-1 px-3 text-xs md:text-sm text-gray-900 bg-gradient-to-r from-teal-400 to-teal-700 bg-opacity-25 font-semibold rounded-full tracking-wide shadow-md border-b border-gray-700"
+          className="ml-3 py-1 px-3 text-xs md:text-sm text-gray-900 bg-white hover:bg-opacity-60 font-semibold rounded-full tracking-wide shadow-md border-b border-gray-700"
         >
           Pending
         </button>
@@ -68,7 +68,7 @@ function CollaborateButton({ user, userToCollab }) {
   // TODO: If logged in and followed show followed button else show unfollow button. If not logged in show button but onClick redirect to home
   return (
     <Link to="/login">
-      <button className="py-1 px-3 ml-3 bg-gradient-to-r from-black to-gray-900 text-teal-400 hover:text-gray-900 hover:bg-gradient-to-r hover:from-teal-400 hover:to-teal-700 hover:bg-opacity-25 rounded-full tracking-wide shadow-md border-b border-gray-700  transition ease-out duration-500">
+      <button className="py-1 px-3 ml-3 bg-black text-gray-50 rounded-full hover:text-black hover:bg-white tracking-wide shadow-md border-b border-gray-700  transition ease-out duration-500">
         Collaborate
       </button>
     </Link>

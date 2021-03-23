@@ -1,3 +1,4 @@
+import "react-image-lightbox/style.css";
 import React, { useEffect, useState } from "react";
 import LockPaintingButton from "../Buttons/LockPaintingButton";
 import { useMutation, gql } from "@apollo/client";
@@ -141,7 +142,7 @@ function GalleryCard({ painting, user, profileUsername, searchQuery, isPublic })
           <LoadingSpinner />
         </div>
       ) : (
-        <div className="relative bg-white text-center my-1 rounded-sm hover:bg-black hover:bg-opacity-50 px-2 py-2 mr-2 shadow-md transition duration-300 ease-in-out">
+        <div className="relative bg-white text-center my-1 rounded-sm hover:bg-black hover:bg-opacity-10 px-2 py-2 mr-2 shadow-md transition duration-300 ease-in-out">
           <button
             onClick={() => {
               setImgModalOpen(true);

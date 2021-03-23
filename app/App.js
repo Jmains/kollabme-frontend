@@ -30,6 +30,7 @@ import ReactGa from "react-ga";
 // Auth Context
 import { AuthProvider } from "./context/auth";
 import Modal from "react-modal";
+// This only needs to be imported once in your app
 
 Modal.setAppElement("#app");
 

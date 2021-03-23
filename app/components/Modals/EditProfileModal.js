@@ -81,7 +81,7 @@ function EditProfileModal(props) {
     <div className="bg-cardBg mt-20">
       <form
         style={formStyle}
-        className="rounded-lg shadow-lg text-sm md:text-base px-8 lg:px-5 py-5 text-teal-400 font-medium tracking-wider"
+        className="rounded-lg shadow-lg text-sm md:text-base px-8 lg:px-5 py-5 text-gray-50 font-medium tracking-wider"
         onSubmit={submit}
       >
         {/* mainPlatform */}
@@ -481,8 +481,9 @@ function EditProfileModal(props) {
             Cancel
           </button>
           <button
-            className="py-1 px-3 ml-1 bg-gradient-to-r font-semibold text-gray-900 from-teal-400 to-teal-700 hover:bg-gradient-to-r hover:from-teal-300 hover:to-teal-600 transition duration-300 ease-out rounded-md tracking-wide shadow-md"
+            className="py-1 px-3 ml-1 bg-gradient-to-r font-semibold text-gray-900 bg-white hover:bg-opacity-60 transition duration-300 ease-out rounded-md tracking-wide shadow-md"
             type="submit"
+            disabled={loading}
           >
             Update
           </button>

@@ -153,7 +153,7 @@ function AddTrackModal(props) {
       className="bg-cardBg mt-32 md:mt-20 rounded-lg p-2 mx-auto w-full md:w-screen max-w-lg md:max-w-2xl"
     >
       <div className="flex justify-between items-center border-b border-gray-700">
-        <h1 className="text-teal-400 font-bold tracking-wide  py-2">Add Track</h1>
+        <h1 className="text-gray-50 font-bold tracking-wide  py-2">Add Track</h1>
         <button
           aria-label="close popup"
           onClick={() => {
@@ -281,10 +281,11 @@ function AddTrackModal(props) {
       ) : (
         <div className="flex justify-end items-baseline mt-2">
           <button
+            disabled={createTrackLoading}
             type="submit"
-            className="text-gray-900 shadow-md font-bold rounded-md text-sm px-2 py-1 bg-gradient-to-r from-teal-400 to-teal-700 hover:bg-gradient-to-r hover:from-teal-600 hover:to-teal-800"
+            className="text-gray-50 shadow-md font-bold rounded-md text-sm px-2 py-1 bg-black md:text-base"
           >
-            Add +
+            Create Track +
           </button>
         </div>
       )}

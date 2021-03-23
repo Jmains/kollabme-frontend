@@ -164,25 +164,25 @@ function CommentForm({ postId, commentId, setReplyToComment, setShowReplies, use
                 {userData && userData.mainPlatforms && userData.mainPlatforms[0] && (
                   <NavLink
                     to=""
-                    className="bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out"
+                    className="bg-gray-900  whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out"
                   >
-                    <h5 className="text-gray-500 py-1 px-2">#{userData.mainPlatforms[0]}</h5>
+                    <h5 className="text-gray-100 py-1 px-2">#{userData.mainPlatforms[0]}</h5>
                   </NavLink>
                 )}
                 {userData && userData.mainPlatforms && userData.mainPlatforms[1] && (
                   <NavLink
                     to=""
-                    className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out "
+                    className="ml-2 bg-gray-900  whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out "
                   >
-                    <h5 className="text-gray-500 py-1 px-2 ">#{userData.mainPlatforms[1]}</h5>
+                    <h5 className="text-gray-100 py-1 px-2 ">#{userData.mainPlatforms[1]}</h5>
                   </NavLink>
                 )}
                 {userData && userData.mainPlatforms && userData.mainPlatforms[2] && (
                   <NavLink
                     to=""
-                    className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out"
+                    className="ml-2 bg-gray-900  whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out"
                   >
-                    <h5 className="text-gray-500 py-1 px-2">#{userData.mainPlatforms[2]}</h5>
+                    <h5 className="text-gray-100 py-1 px-2">#{userData.mainPlatforms[2]}</h5>
                   </NavLink>
                 )}
               </div>
@@ -210,7 +210,7 @@ function CommentForm({ postId, commentId, setReplyToComment, setShowReplies, use
                 <div className="flex justify-end">
                   <button
                     // disabled={values.commentBody.trim() === ""}
-                    className="py-1 border-b border-gray-700 tracking-wide text-xs sm:text-sm bg-black bg-opacity-75 shadow-md hover:bg-teal-400 hover:text-gray-900 text-teal-400 font-bold px-4 rounded-md focus:outline-none transition duration-200 ease-out"
+                    className="py-1 border-b border-gray-700 tracking-wide text-xs sm:text-sm bg-black bg-opacity-75 shadow-md hover:bg-teal-400 hover:text-gray-900 text-white font-bold px-4 rounded-md focus:outline-none transition duration-200 ease-out"
                     type="submit"
                   >
                     Comment

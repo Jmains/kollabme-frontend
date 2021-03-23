@@ -15,13 +15,13 @@ function UserContactCard({ user, cursor, fetchMore, networkStatus, loading }) {
         alt="Profile picture"
       />
       <div className="ml-1">
-        <div className="flex items-baseline text-gray-400 font-semibold w-64 text-sm truncate">
+        <div className="flex items-baseline text-gray-50 font-semibold w-64 text-sm truncate">
           {user.displayName ? (
             <h1>{user.displayName}</h1>
           ) : (
             <h1>{capitalizeFirstLetter(user.username)}</h1>
           )}
-          <span className="text-xs ml-2 font-semibold text-teal-400">@{user.username}</span>
+          <span className="text-xs ml-2 font-semibold text-gray-500">@{user.username}</span>
         </div>
         <div className="flex pr-2">
           {user.mainPlatforms &&
@@ -29,13 +29,13 @@ function UserContactCard({ user, cursor, fetchMore, networkStatus, loading }) {
               if (user.mainPlatforms[i]) {
                 if (i === 2 || i === 0) {
                   return (
-                    <p key={i} className="text-gray-600 font-normal text-xs">
+                    <p key={i} className="text-gray-400 font-normal text-xs">
                       {`${mp}`}
                     </p>
                   );
                 } else {
                   return (
-                    <p key={i} className="text-gray-600 font-normal text-xs">
+                    <p key={i} className="text-gray-400 font-normal text-xs">
                       {`${mp},\u00A0`}
                     </p>
                   );

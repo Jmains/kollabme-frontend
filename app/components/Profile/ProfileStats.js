@@ -60,7 +60,7 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
         />
       </Modal>
 
-      <div className="flex rounded-full relative" style={statsBg}>
+      <div className="flex rounded-full relative items-center justify-center" style={statsBg}>
         <button
           aria-label={`show followers, ${followerCount} followers`}
           onClick={() => {
@@ -72,7 +72,7 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
           className="py-1 px-2 md:text-xs sm:px-5 md:px-6 border-r-2 border-gray-600 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out rounded-l-full"
         >
           <div tabIndex="-1">
-            <p className="text-tiny sm:text-xs font-bold tracking-wide text-teal-400">
+            <p className="text-sm sm:text-xs font-bold tracking-wide text-white">
               {nFormatter(followerCount)}
             </p>
             <p className="text-tiny sm:text-xs text-gray-400 font-medium">Followers</p>
@@ -89,7 +89,7 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
           className="md:text-xs py-1 px-1 sm:px-4 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out"
         >
           <div tabIndex="-1">
-            <span className="text-tiny sm:text-xs font-bold tracking-wide text-teal-400">
+            <span className="text-sm sm:text-xs font-bold tracking-wide text-white">
               {nFormatter(followingCount)}
             </span>
             <p className="text-tiny sm:text-xs text-gray-400 font-medium">Following</p>
@@ -105,7 +105,7 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
           }}
           className="text-tiny sm:text-xs py-1 px-2 sm:px-3 md:px-6 border-l-2 border-gray-600 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out rounded-r-full"
         >
-          <p className="text-tiny sm:text-xs font-bold tracking-wide text-teal-400">
+          <p className="text-sm sm:text-xs font-bold tracking-wide text-white">
             {nFormatter(collaboratorCount)}
           </p>
           <p className=" text-gray-400 font-medium">Collaborators</p>

@@ -36,7 +36,7 @@ function LikeTrackButton({ user, track: { id, likeCount, likes } }) {
           <button
             aria-label={`like track, ${likeCount} likes`}
             onClick={likeTrack}
-            className="text-gray-600 items-center hover:text-orange-600 transition duration-300 ease-in-out flex cursor-pointer"
+            className="text-gray-600 items-center hover:text-red-500 transition duration-300 ease-in-out flex cursor-pointer"
           >
             <Fire className="fill-current rounded-full h-5 w-5 hover:scale-110 transform transition duration-300 ease-in-out" />
             <span className="inline-block text-xs sm:text-sm font-semibold ml-1">
@@ -48,7 +48,7 @@ function LikeTrackButton({ user, track: { id, likeCount, likes } }) {
         <Link
           to="/login"
           aria-label={`like track, ${likeCount} likes`}
-          className="text-gray-600 items-center hover:text-orange-600 transition duration-300 ease-in-out cursor-pointer flex"
+          className="text-gray-600 items-center hover:text-red-500 transition duration-300 ease-in-out cursor-pointer flex"
         >
           <Fire className="fill-current rounded-full h-5 w-5" />
           <span className="inline-block text-base font-semibold ml-1">

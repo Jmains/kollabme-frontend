@@ -24,16 +24,16 @@ function LockTrackButton({ user, track }) {
   const lockButton = user ? (
     isPublic ? (
       <button aria-label="hide from public" onClick={makePublic} className="cursor-pointer">
-        <Lock className="h-5 w-5 fill-current text-yellow-700 hover:scale-110 transform transition duration-300 ease-in-out" />
+        <Lock className="h-5 w-5 fill-current text-blue-600 hover:scale-110 transform transition duration-300 ease-in-out" />
       </button>
     ) : (
       <button aria-label="make public" onClick={makePublic} className="cursor-pointer">
-        <Lock className="h-5 w-5 fill-current text-gray-600 hover:text-yellow-700 hover:scale-110 transform transition duration-300 ease-in-out" />
+        <Lock className="h-5 w-5 fill-current text-gray-600 hover:text-blue-600 hover:scale-110 transform transition duration-300 ease-in-out" />
       </button>
     )
   ) : (
     <Link to="/login" className="cursor-pointer">
-      <Lock className="h-5 w-5 fill-current text-gray-600 hover:text-yellow-700 hover:scale-110 transform transition duration-300 ease-in-out" />
+      <Lock className="h-5 w-5 fill-current text-gray-600 hover:text-blue-600 hover:scale-110 transform transition duration-300 ease-in-out" />
     </Link>
   );
 

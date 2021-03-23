@@ -39,21 +39,17 @@ function Register(props) {
       {loading ? (
         <div>Loading</div>
       ) : (
-        <div className="min-h-screen bg-pageBg -pt-16 flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-md w-full">
             <div>
-              <img
-                className="mx-auto h-20 w-auto"
-                src="https://intreecate.s3-us-west-1.amazonaws.com/intreecatelogo1.png"
-                alt="Intreecate Logo"
-              />
-              <h2 className="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-200">
-                Sign up an account
+              <h2 className="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+                Sign up
               </h2>
             </div>
             <form className="mt-8" onSubmit={onSubmit}>
               <div className="rounded-md shadow-sm">
                 <div>
+                  <label htmlFor="username">Username*</label>
                   <input
                     aria-label="Username"
                     onChange={onFieldChange}
@@ -61,14 +57,14 @@ function Register(props) {
                     name="username"
                     type="text"
                     required
-                    className="appearance-none text-sm rounded relative block w-full px-3 py-2 border bg-gray-300 border-gray-700 placeholder-gray-900 text-gray-900 rounded-t-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
-                    placeholder="Username"
+                    className="appearance-none text-sm rounded relative block w-full px-3 py-2 border bg-white border-gray-700 placeholder-gray-900 text-gray-900 rounded-t-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
                   />
                 </div>
                 {errors && errors.username && (
                   <p className="text-red-500 text-xs italic">{errors.username}</p>
                 )}
                 <div className="mt-5">
+                  <label htmlFor="email">Email Address*</label>
                   <input
                     aria-label="Email Address"
                     onChange={onFieldChange}
@@ -76,14 +72,14 @@ function Register(props) {
                     name="email"
                     type="email"
                     required
-                    className="appearance-none rounded text-sm relative block w-full px-3 py-2 border bg-gray-300 border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
-                    placeholder="Email Address"
+                    className="appearance-none rounded text-sm relative block w-full px-3 py-2 border bg-white border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
                   />
                 </div>
                 {errors && errors.email && (
                   <p className="text-red-500 text-xs italic">{errors.email}</p>
                 )}
                 <div className="mt-5">
+                  <label htmlFor="password">Password*</label>
                   <input
                     aria-label="Password"
                     onChange={onFieldChange}
@@ -91,14 +87,14 @@ function Register(props) {
                     name="password"
                     type="password"
                     required
-                    className="appearance-none rounded text-sm relative block w-full px-3 py-2 border bg-gray-300 border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
-                    placeholder="Password"
+                    className="appearance-none rounded text-sm relative block w-full px-3 py-2 border bg-white border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
                   />
                 </div>
                 {errors && errors.password && (
                   <p className="text-red-500 text-xs italic">{errors.password}</p>
                 )}
                 <div className="mt-5">
+                  <label htmlFor="confirmPassword">Confirm Password</label>
                   <input
                     aria-label="Confirm Password"
                     onChange={onFieldChange}
@@ -106,8 +102,7 @@ function Register(props) {
                     name="confirmPassword"
                     type="password"
                     required
-                    className="appearance-none rounded text-sm relative block w-full px-3 py-2 border bg-gray-300 border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
-                    placeholder="Confirm Password"
+                    className="appearance-none rounded text-sm relative block w-full px-3 py-2 border bg-white border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
                   />
                 </div>
                 {errors && errors.confirmPassword && (
@@ -115,21 +110,17 @@ function Register(props) {
                 )}
               </div>
 
-              <div className="mt-6 flex text-sm justify-center text-gray-400">
-                <p>By clicking Sign Up you are agreeing to our terms and conditions</p>
-              </div>
-
               <div className="mt-6">
                 <button
                   type="submit"
-                  className=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white shadow-lg bg-gray-900 hover:bg-teal-400 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                  className=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white hover:bg-white hover:text-gray-900 shadow-lg bg-gray-900 focus:shadow-outline-indigo transition duration-150 ease-in-out"
                 >
                   Sign Up
                 </button>
               </div>
             </form>
             <p className="text-center text-gray-500 text-xs">
-              &copy;2020 Intreecate LLC. All rights reserved.
+              &copy;2020 KollabMe. All rights reserved.
             </p>
           </div>
           {/* {Object.keys(errors).length > 0 &&

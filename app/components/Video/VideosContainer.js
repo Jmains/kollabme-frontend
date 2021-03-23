@@ -161,7 +161,7 @@ function VideosContainer(props) {
       </div>
 
       {videos && videos.length !== 0 && (
-        <div className="grid grid-cols-1 gap-x-2 sm:grid-cols-2 grid-flow-row mt-2 bg-pageBg rounded-lg">
+        <div className="grid grid-cols-1 gap-x-2 sm:grid-cols-2 grid-flow-row mt-2 bg-white rounded-lg">
           {videos &&
             videos.map((video) => {
               return (

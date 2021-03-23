@@ -117,7 +117,7 @@ function CommentCard({ comment, user }) {
           onClick={() => {
             // props.history.push(`/posts/${post.id}`);
           }}
-          className="flex relative py-2 border-b border-gray-700 transition ease-out duration-300"
+          className="flex relative py-2 border-b border-gray-500 transition ease-out duration-300"
         >
           {/* Post items container */}
           <div className="flex w-full p-1 mx-auto">
@@ -158,9 +158,9 @@ function CommentCard({ comment, user }) {
                   {comment.author.mainPlatforms && comment.author.mainPlatforms[0] && (
                     <NavLink
                       to=""
-                      className="bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out"
+                      className="bg-gray-900 whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out"
                     >
-                      <h5 className="text-gray-500 py-1 px-2">
+                      <h5 className="text-gray-100 py-1 px-2">
                         #{comment.author.mainPlatforms[0]}
                       </h5>
                     </NavLink>
@@ -168,9 +168,9 @@ function CommentCard({ comment, user }) {
                   {comment.author.mainPlatforms && comment.author.mainPlatforms[1] && (
                     <NavLink
                       to=""
-                      className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out "
+                      className="ml-2 bg-gray-900 whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out "
                     >
-                      <h5 className="text-gray-500 py-1 px-2 ">
+                      <h5 className="text-gray-100 py-1 px-2 ">
                         #{comment.author.mainPlatforms[1]}
                       </h5>
                     </NavLink>
@@ -178,9 +178,9 @@ function CommentCard({ comment, user }) {
                   {comment.author.mainPlatforms && comment.author.mainPlatforms[2] && (
                     <NavLink
                       to=""
-                      className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out"
+                      className="ml-2 bg-gray-900 whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out"
                     >
-                      <h5 className="text-gray-500 py-1 px-2">
+                      <h5 className="text-gray-100 py-1 px-2">
                         #{comment.author.mainPlatforms[2]}
                       </h5>
                     </NavLink>
@@ -190,7 +190,7 @@ function CommentCard({ comment, user }) {
 
               <p
                 style={{ overflowWrap: "break-word" }}
-                className="mt-2 text-gray-400 text-xs sm:text-sm  w-full"
+                className="mt-2 text-gray-800 text-xs sm:text-sm  w-full"
               >
                 {comment.body}
               </p>

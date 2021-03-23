@@ -139,7 +139,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
           onClick={() => {
             setModalIsOpen(true);
           }}
-          className="py-1 px-3 text-xs md:text-sm text-gray-900 bg-gradient-to-r from-teal-400 to-teal-700 hover:bg-gradient-to-r hover:from-teal-300 hover:to-teal-600 font-semibold rounded-full tracking-wide shadow-md  border-gray-600 transition ease-out duration-500"
+          className="py-1 px-3 text-xs md:text-sm text-gray-900 bg-white hover:bg-opacity-60 font-semibold rounded-full tracking-wide shadow-md border-gray-600 transition ease-out duration-500"
         >
           Edit Profile
         </button>

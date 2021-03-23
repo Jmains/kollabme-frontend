@@ -93,46 +93,6 @@ function Community() {
           </div>
         </div>
         {/* End post form and posts card container */}
-
-        {/* Artist in your genre suggestions card */}
-        <div className="fixed w-1/4 max-w-sm top-0 right-0 mr-10">
-          <div className="mt-20 hidden xl:block">
-            <h3 className="ml-3 mt-2 lg:text-lg md:text-sm text-teal-400 font-bold tracking-wide">
-              Artists In Your Area (Coming soon...)
-            </h3>
-            {/* Test data */}
-            <ArtistSuggestionCard
-              firstName="Elton"
-              lastName="J."
-              genre="Rock"
-              profilePic="https://images.unsplash.com/photo-1580635154775-fc15cb6e0595?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-            />
-            <ArtistSuggestionCard
-              firstName="Jermaine"
-              lastName="C."
-              genre="Rap"
-              profilePic="https://images.unsplash.com/photo-1578880711834-5cb67ff7bde3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-            />
-            <ArtistSuggestionCard
-              firstName="Kendrick"
-              lastName="L."
-              genre="Rap"
-              profilePic="https://images.unsplash.com/photo-1509847950535-14e861e5191b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=938&q=80"
-            />
-            <ArtistSuggestionCard
-              firstName="Billie"
-              lastName="E."
-              genre="Pop"
-              profilePic="https://images.unsplash.com/photo-1462804993656-fac4ff489837?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-            />
-            <ArtistSuggestionCard
-              firstName="Drake"
-              lastName=""
-              genre="Rap"
-              profilePic="https://images.unsplash.com/photo-1534205643743-6737932c79ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-            />
-          </div>
-        </div>
       </div>
     </Page>
   );

@@ -37,22 +37,18 @@ function Login(props) {
       {loading ? (
         <h1>loading...</h1>
       ) : (
-        <div className="min-h-screen bg-pageBg bg-gradient-to-r -pt-20 flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-md w-full">
             <div>
-              <img
-                className="mx-auto h-20 w-auto"
-                src="https://intreecate.s3-us-west-1.amazonaws.com/intreecatelogo1.png"
-                alt="Intreecate Logo"
-              />
-              <h2 className="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-200">
-                Sign in to your account
+              <h2 className="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+                Sign in
               </h2>
             </div>
             <form className="mt-8" onSubmit={onSubmit}>
               <input type="hidden" name="remember" value="true" />
               <div className="rounded-md shadow-sm">
                 <div>
+                  <label htmlFor="email">Email Address*</label>
                   <input
                     aria-label="Email address"
                     onChange={onFieldChange}
@@ -60,12 +56,12 @@ function Login(props) {
                     name="email"
                     type="email"
                     required
-                    className="appearance-none rounded relative block w-full px-3 py-2 border text-sm bg-gray-300 border-gray-700 placeholder-gray-900 text-gray-900 rounded-t-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
-                    placeholder="Email Address"
+                    className="appearance-none rounded relative block w-full px-3 py-2 border text-sm bg-white border-gray-700 placeholder-gray-900 text-gray-900 rounded-t-md focus:outline-none focus:shadow-outline-gray focus:border-white focus:z-10 sm:text-sm sm:leading-5"
                   />
                 </div>
 
                 <div className="mt-3">
+                  <label htmlFor="email">Password*</label>
                   <input
                     aria-label="Password"
                     onChange={onFieldChange}
@@ -73,8 +69,7 @@ function Login(props) {
                     name="password"
                     type="password"
                     required
-                    className="appearance-none rounded relative block w-full px-3 py-2 border text-sm bg-gray-300 border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-gray-300 focus:z-10 sm:text-sm sm:leading-5"
-                    placeholder="Password"
+                    className="appearance-none rounded relative block w-full px-3 py-2 border text-sm bg-white border-gray-700 placeholder-gray-900 text-gray-900 rounded-b-md focus:outline-none focus:shadow-outline-gray focus:border-white focus:z-10 sm:text-sm sm:leading-5"
                   />
                 </div>
               </div>
@@ -87,11 +82,11 @@ function Login(props) {
                   <input
                     id="remember_me"
                     type="checkbox"
-                    className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                    className="form-checkbox h-4 w-4 text-gray-600 transition duration-150 ease-in-out"
                   />
                   <label
                     htmlFor="remember_me"
-                    className="ml-2 block text-sm leading-5 text-gray-400"
+                    className="ml-2 block text-sm leading-5 text-gray-600"
                   >
                     Remember me
                   </label>
@@ -100,7 +95,7 @@ function Login(props) {
                 <div className="text-sm leading-5">
                   <a
                     // onClick={sendEmail}
-                    className="font-medium cursor-pointer text-gray-400 hover:text-teal-300 focus:outline-none focus:underline transition ease-in-out duration-150"
+                    className="font-medium cursor-pointer text-gray-600 hover:underline focus:outline-none focus:underline transition ease-in-out duration-150"
                   >
                     Forgot your password?
                   </a>
@@ -110,11 +105,11 @@ function Login(props) {
               <div className="mt-6">
                 <button
                   type="submit"
-                  className=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white shadow-lg bg-gray-900 hover:bg-teal-400 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                  className=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white shadow-lg bg-gray-900 hover:text-gray-900 hover:bg-white focus:outline-none transition duration-150 ease-in-out"
                 >
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                     <svg
-                      className="h-5 w-5 text-teal-500 group-hover:text-teal-400 transition ease-in-out duration-150"
+                      className="h-5 w-5 text-white group-hover:text-gray-900 transition ease-in-out duration-150"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -130,7 +125,7 @@ function Login(props) {
               </div>
             </form>
             <p className="text-center text-gray-500 text-xs">
-              &copy;2020 Intreecate LLC. All rights reserved.
+              &copy;2020 KollabMe. All rights reserved.
             </p>
           </div>
         </div>

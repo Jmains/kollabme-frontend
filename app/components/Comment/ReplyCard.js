@@ -125,9 +125,9 @@ function ReplyCard({ commentReply, user, commentId }) {
                   {commentReply.author.mainPlatforms && commentReply.author.mainPlatforms[0] && (
                     <NavLink
                       to={`/${commentReply.author.username}`}
-                      className="bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out"
+                      className="bg-gray-900  whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out"
                     >
-                      <h5 className="text-gray-500 py-1 px-2">
+                      <h5 className="text-gray-100 py-1 px-2">
                         #{commentReply.author.mainPlatforms[0]}
                       </h5>
                     </NavLink>
@@ -135,9 +135,9 @@ function ReplyCard({ commentReply, user, commentId }) {
                   {commentReply.author.mainPlatforms && commentReply.author.mainPlatforms[1] && (
                     <NavLink
                       to={`/${commentReply.author.username}`}
-                      className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out "
+                      className="ml-2 bg-gray-900  whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out "
                     >
-                      <h5 className="text-gray-500 py-1 px-2 ">
+                      <h5 className="text-gray-100 py-1 px-2 ">
                         #{commentReply.author.mainPlatforms[1]}
                       </h5>
                     </NavLink>
@@ -145,9 +145,9 @@ function ReplyCard({ commentReply, user, commentId }) {
                   {commentReply.author.mainPlatforms && commentReply.author.mainPlatforms[2] && (
                     <NavLink
                       to={`/${commentReply.author.username}`}
-                      className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out"
+                      className="ml-2 bg-gray-900  whitespace-no-wrap rounded-full shadow-md hover:bg-opacity-60 focus:outline-none transition duration-300 ease-out"
                     >
-                      <h5 className="text-gray-500 py-1 px-2">
+                      <h5 className="text-gray-100 py-1 px-2">
                         #{commentReply.author.mainPlatforms[2]}
                       </h5>
                     </NavLink>
@@ -157,7 +157,7 @@ function ReplyCard({ commentReply, user, commentId }) {
 
               <p
                 style={{ overflowWrap: "break-word" }}
-                className="mt-2 text-gray-400 text-xs sm:text-sm md:text-sm w-full"
+                className="mt-2 text-gray-800 text-xs sm:text-sm md:text-sm w-full"
               >
                 {commentReply.body}
               </p>
