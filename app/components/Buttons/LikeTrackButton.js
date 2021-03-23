@@ -24,7 +24,7 @@ function LikeTrackButton({ user, track: { id, likeCount, likes } }) {
         liked ? (
           <button
             aria-label={`unlike track, ${likeCount} likes`}
-            className="flex items-center text-orange-600 cursor-pointer"
+            className="flex items-center text-red-500 cursor-pointer"
             onClick={likeTrack}
           >
             <Fire className="fill-current rounded-full h-5 w-5 hover:scale-110 transform transition duration-300 ease-in-out" />

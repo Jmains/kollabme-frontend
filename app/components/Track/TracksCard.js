@@ -140,7 +140,7 @@ function TracksCard({ track, user, profileUsername, searchQuery, isPublic }) {
           <LoadingSpinner />
         </div>
       ) : (
-        <div className="flex relative items-center w-full bg-cardBg bg-opacity-25 p-1 my-1 shadow-md rounded-md hover:bg-black hover:bg-opacity-25 transition duration-300 ease-in-out">
+        <div className="flex relative items-center w-full bg-white p-1 my-1 shadow-md rounded-sm hover:bg-black hover:bg-opacity-25 transition duration-300 ease-in-out">
           <Link to={`/${track.username}/tracks/${track.id}`} className="cursor-pointer">
             <img
               className="m-2 rounded-lg h-12 w-12 object-center object-cover shadow-md"
@@ -152,7 +152,7 @@ function TracksCard({ track, user, profileUsername, searchQuery, isPublic }) {
           <div className="ml-1">
             <Link
               to={`/${track.username}/tracks/${track.id}`}
-              className="block text-gray-400 w-24 sm:w-40 w text-xs sm:text-sm truncate font-extrabold tracking-wide hover:underline"
+              className="block text-black w-24 sm:w-40 w text-xs sm:text-sm truncate font-extrabold tracking-wide hover:underline"
             >
               {track.title}
             </Link>

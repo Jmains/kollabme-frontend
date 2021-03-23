@@ -12,6 +12,7 @@ import ReactAudioPlayer from "../MediaPlayers/ReactAudioPlayer";
 import PostEmbeddedTrack from "./PostEmbeddedTrack";
 import { useMutation, gql } from "@apollo/client";
 import { QUERY_POSTS } from "../../utils/graphql";
+import lozad from "lozad";
 
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
@@ -26,6 +27,9 @@ function PostCard({ post }) {
   const { user } = useAuthState();
   const [showMorePostOptions, setShowMorePostOptions] = useState(false);
   const [imgModalOpen, setImgModalOpen] = useState(false);
+
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
 
   let postId = "";
   if (post) {
@@ -109,7 +113,7 @@ function PostCard({ post }) {
           onClick={() => {
             // props.history.push(`/posts/${post.id}`);
           }}
-          className="flex relative my-2 px-2 py-1 shadow-md rounded-md transition ease-out duration-300 bg-cardbg bg-opacity-25 hover:bg-black hover:bg-opacity-25"
+          className="flex relative my-2 px-2 py-1 shadow-md rounded-sm transition ease-out duration-300 bg-white hover:bg-black hover:bg-opacity-10"
         >
           {/* Post items container */}
           <div className="flex w-full md:px-2 py-1 rounded-full mx-auto">
@@ -130,7 +134,7 @@ function PostCard({ post }) {
                   {/* Name */}
                   <NavLink
                     to={`/${post.author.username}`}
-                    className=" sm:text-base mb-1 tracking-wide focus:outline-none md:text-base cursor-pointer text-sm font-bold text-teal-400 "
+                    className=" sm:text-base mb-1 tracking-wide focus:outline-none md:text-lg cursor-pointer font-bold text-black"
                   >
                     {post.author.displayName ? (
                       <h2 className="hover:underline w-64 truncate">
@@ -145,22 +149,22 @@ function PostCard({ post }) {
                     {/* Tags */}
                     <div className="flex font-semibold text-tiny sm:text-xs mt-1">
                       {post.author.mainPlatforms && post.author.mainPlatforms[0] && (
-                        <div className="bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out">
-                          <h5 className="text-gray-500 py-1 px-2">
+                        <div className="bg-black whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out">
+                          <h5 className="text-gray-50 py-1 px-2">
                             #{post.author.mainPlatforms[0]}
                           </h5>
                         </div>
                       )}
                       {post.author.mainPlatforms && post.author.mainPlatforms[1] && (
-                        <div className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out ">
-                          <h5 className="text-gray-500 py-1 px-2 ">
+                        <div className="ml-2 bg-black whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out ">
+                          <h5 className="text-gray-50 py-1 px-2 ">
                             #{post.author.mainPlatforms[1]}
                           </h5>
                         </div>
                       )}
                       {post.author.mainPlatforms && post.author.mainPlatforms[2] && (
-                        <div className="ml-2 bg-blue-800 bg-opacity-25 whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out">
-                          <h5 className="text-gray-500 py-1 px-2">
+                        <div className="ml-2 bg-black whitespace-no-wrap rounded-full shadow-md hover:bg-blue-500 hover:bg-opacity-25 focus:outline-none transition duration-300 ease-out">
+                          <h5 className="text-gray-50 py-1 px-2">
                             #{post.author.mainPlatforms[2]}
                           </h5>
                         </div>
@@ -179,7 +183,7 @@ function PostCard({ post }) {
 
               <p
                 style={{ overflowWrap: "break-word" }}
-                className="mt-2 font-medium text-gray-400 text-sm sm:text-base md:text-md w-full"
+                className="my-4 font-medium text-gray-800 text-sm sm:text-base md:text-md w-full"
               >
                 {post.body}
               </p>
@@ -196,8 +200,8 @@ function PostCard({ post }) {
                   className="rounded-md overflow-hidden"
                 >
                   <img
-                    className="shadow-md rounded-md border-2 border-gray-700 mt-2 cursor-pointer inline-block h-64 w-full sm:h-64 object-cover object-center"
-                    src={post.imageUrl}
+                    className="shadow-md rounded-md border-2 border-gray-700 mt-2 cursor-pointer inline-block h-64 w-full sm:h-64 object-cover object-center lozad"
+                    data-src={post.imageUrl}
                     alt="Post Image"
                   />
                 </div>
@@ -215,7 +219,7 @@ function PostCard({ post }) {
               {post.videoUrl && (
                 <div
                   style={playerWrapper}
-                  className="block shadow-md mx-auto rounded-md h-48 sm:h-64 w-full border-2 border-gray-700 mt-2 focus:outline-none cursor-pointer"
+                  className="block shadow-md mx-auto rounded-md h-48 sm:h-64 w-full border border-gray-700 mt-2 focus:outline-none cursor-pointer"
                 >
                   <VideoPlayer videoSource={post.videoUrl} />
                 </div>

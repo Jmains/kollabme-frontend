@@ -69,13 +69,13 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
             setType(ProfileStatsDetailTypes.FOLLOWERS);
             setModalIsOpen(!modalIsOpen);
           }}
-          className="py-1 px-2 md:text-xs sm:px-5 md:px-6 border-r-2 border-gray-400 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out rounded-l-full"
+          className="py-1 px-2 md:text-xs sm:px-5 md:px-6 border-r-2 border-gray-600 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out rounded-l-full"
         >
           <div tabIndex="-1">
             <p className="text-tiny sm:text-xs font-bold tracking-wide text-teal-400">
               {nFormatter(followerCount)}
             </p>
-            <p className="text-tiny sm:text-xs text-gray-500 font-medium">Followers</p>
+            <p className="text-tiny sm:text-xs text-gray-400 font-medium">Followers</p>
           </div>
         </button>
         <button
@@ -92,7 +92,7 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
             <span className="text-tiny sm:text-xs font-bold tracking-wide text-teal-400">
               {nFormatter(followingCount)}
             </span>
-            <p className="text-tiny sm:text-xs text-gray-500 font-medium">Following</p>
+            <p className="text-tiny sm:text-xs text-gray-400 font-medium">Following</p>
           </div>
         </button>
         <button
@@ -103,12 +103,12 @@ function ProfileStats({ followerCount, followingCount, collaboratorCount }) {
             setType(ProfileStatsDetailTypes.COLLABORATORS);
             setModalIsOpen(!modalIsOpen);
           }}
-          className="text-tiny sm:text-xs py-1 px-2 sm:px-3 md:px-6 border-l-2 border-gray-400 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out rounded-r-full"
+          className="text-tiny sm:text-xs py-1 px-2 sm:px-3 md:px-6 border-l-2 border-gray-600 text-center cursor-pointer hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out rounded-r-full"
         >
           <p className="text-tiny sm:text-xs font-bold tracking-wide text-teal-400">
             {nFormatter(collaboratorCount)}
           </p>
-          <p className=" text-gray-500 font-medium">Collaborators</p>
+          <p className=" text-gray-400 font-medium">Collaborators</p>
         </button>
       </div>
     </>

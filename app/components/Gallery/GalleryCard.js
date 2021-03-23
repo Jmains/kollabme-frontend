@@ -6,10 +6,13 @@ import LikePaintingButton from "../Buttons/LikePaintingButton";
 import { Link } from "react-router-dom";
 import LoadingSpinner from "../Shared/LoadingSpinner";
 import Lightbox from "react-image-lightbox";
+import lozad from "lozad";
 
 function GalleryCard({ painting, user, profileUsername, searchQuery, isPublic }) {
   const [showMorePaintingOptions, setShowMorePaintingOptions] = useState(false);
   const [imgModalOpen, setImgModalOpen] = useState(false);
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
 
   const [deletePainting, { data, error, loading }] = useMutation(DELETE_PAINTING_MUTATION, {
     variables: { paintingId: painting.id },
@@ -138,7 +141,7 @@ function GalleryCard({ painting, user, profileUsername, searchQuery, isPublic })
           <LoadingSpinner />
         </div>
       ) : (
-        <div className=" relative md:max-h-48 bg-cardBg text-center content-center my-1 rounded-lg hover:bg-black hover:bg-opacity-50 px-2 py-2 mr-2 shadow-md transition duration-300 ease-in-out">
+        <div className="relative bg-white text-center my-1 rounded-sm hover:bg-black hover:bg-opacity-50 px-2 py-2 mr-2 shadow-md transition duration-300 ease-in-out">
           <button
             onClick={() => {
               setImgModalOpen(true);
@@ -146,8 +149,8 @@ function GalleryCard({ painting, user, profileUsername, searchQuery, isPublic })
             aria-label="enhance image button"
           >
             <img
-              className="mt-3 inline-block sm:h-48 sm:w-56 w-56 h-48 rounded-md object-center object-cover cursor-pointer shadow-lg"
-              src={painting.imageUrl}
+              className="mt-3 inline-block rounded-sm object-center object-cover cursor-pointer shadow-lg lozad max-h-80"
+              data-src={painting.imageUrl}
               alt="Painting image"
             />
           </button>
@@ -170,24 +173,24 @@ function GalleryCard({ painting, user, profileUsername, searchQuery, isPublic })
               </div>
             </div>
             <Link to={`/${painting.username}/gallery/${painting.id}`}>
-              <h1 className="text-gray-400 text-xs sm:text-sm font-bold mt-2 cursor-pointer hover:underline w-40 mx-auto truncate">
+              <h1 className="text-gray-900 text-xs sm:text-sm font-bold mt-2 cursor-pointer hover:underline w-40 mx-auto truncate">
                 {painting.title}
               </h1>
-              <p className="text-gray-600 text-xs sm:text-sm font-thin cursor-pointer w-40 mx-auto truncate">
+              <p className="text-gray-700 text-xs sm:text-sm cursor-pointer w-40 mx-auto truncate">
                 {painting.description}
               </p>
             </Link>
             <Link to={`/${painting.username}`}>
               <div className="flex justify-center items-center mx-auto w-40 mt-3">
                 <svg
-                  className="fill-current text-teal-400 -ml-3 h-6 w-6"
+                  className="fill-current text-gray-500 -ml-3 h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
-                <p className="text-teal-400 text-xs sm:text-sm cursor-pointer ml-1 truncate">
+                <p className="text-gray-500 text-xs sm:text-sm cursor-pointer ml-1 truncate">
                   {painting.author.displayName}
                 </p>
               </div>

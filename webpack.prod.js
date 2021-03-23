@@ -42,10 +42,6 @@ module.exports = merge(common, {
           "css-loader",
           {
             loader: "postcss-loader",
-            options: {
-              ident: "postcss",
-              plugins: [require("tailwindcss"), require("autoprefixer")],
-            },
           },
         ],
       },

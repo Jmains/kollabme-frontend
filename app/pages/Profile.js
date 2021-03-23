@@ -179,7 +179,7 @@ function Profile(props) {
   return (
     <Page title={usernameParam ? usernameParam : "Profile"}>
       {/* Cover Photo Container */}
-      <div className="mx-auto shadow-lg rounded-b-lg sm:mx-auto md:mx-auto max-w-full sm:max-w-full md:max-w-6xl relative overflow-hidden">
+      <div className="mx-auto shadow-md max-w-full md:max-w-6xl relative overflow-hidden">
         <div style={coverPhotoStyle} className="md:h-covPhoto h-64 w-full absolute"></div>
         {profileData && (
           <img
@@ -319,6 +319,7 @@ function Profile(props) {
         {/* End Stats container */}
       </div>
       {/* End Cover Photo Container */}
+
       {/* Profile Image Container */}
       <div className="flex max-w-full sm:mx-auto md:mx-auto sm:max-w-full md:max-w-5xl relative">
         {profileData && (
@@ -354,14 +355,19 @@ function Profile(props) {
         {/* End Edit Profile Image Icon */}
 
         {profileData && (
-          <div className="text-lg md:text-2xl lg:text-2xl text-gray-300 ml-3 lg:ml-6 -mt-16 font-bold tracking-wide z-30">
-            <div ref={headingRef} id="heading" tabIndex="0" className="flex items-baseline">
+          <div className="text-lg md:text-2xl lg:text-2xl ml-3 lg:ml-6 font-bold tracking-wide z-30">
+            <div
+              ref={headingRef}
+              id="heading"
+              tabIndex="0"
+              className="flex items-baseline text-black"
+            >
               {profileData.displayName ? (
                 <h1>{profileData.displayName}</h1>
               ) : (
                 <h1>{capitalizeFirstLetter(profileData.username)}</h1>
               )}
-              <span className="text-sm ml-2 font-semibold text-teal-400">
+              <span className="text-sm ml-2 font-semibold text-gray-600">
                 @{profileData.username}
               </span>
             </div>
@@ -413,10 +419,11 @@ function Profile(props) {
         )}
       </div>
       {/* End Profile Image Container */}
+
       {/* Post button, Live Reel button, and post card container */}
-      <div className="lg:flex lg:justify-between lg:my-1 lg:mx-auto md:max-w-6xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 max-w-6xl mx-auto">
         {/* Profile Info Card Container */}
-        <div className="lg:w-64 rounded-md mx-auto mt-2 lg:h-full max-h h-1/2 sm:mx-auto max-w-lg md:max-w-2xl lg:mx-0">
+        <div className="col-span-1 lg:col-span-4 rounded-sm mx-auto mt-2 px-4">
           {profileData && (
             <ProfileInfo
               user={user}
@@ -427,11 +434,12 @@ function Profile(props) {
         </div>
 
         {/* End Profile Info Card Container */}
-        <div className="lg:block lg:w-5/6 ">
+        <div className="col-span-1 lg:col-span-8 px-4">
           {/* Posts button container */}
-
+          {/* 50D1C5 teal*/}
+          {/* 090909 blackbg */}
           {profileData && (
-            <div className="flex justify-evenly items-center rounded-lg border-teal-400 border-b lg:mt-0 text-center my-6 tracking-wide mx-auto max-w-lg md:max-w-xl">
+            <div className="flex justify-evenly items-center rounded-sm border-teal-400 border-b lg:mt-0 text-center my-6 tracking-wide mx-auto">
               {types.map((type, i) => {
                 return (
                   <div key={type}>

@@ -121,7 +121,7 @@ function GalleryContainer(props) {
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-gray-300 font-bold text-base md:text-lg ml-2 focus:outline-none focus:shadow-outline"
+          className="text-black font-bold text-base md:text-lg ml-2 focus:outline-none focus:shadow-outline"
         >
           Gallery
         </h1>
@@ -150,7 +150,7 @@ function GalleryContainer(props) {
                 });
               }
             }}
-            className="sm:w-72 w-40 text-xs sm:text-sm relative z-40 bg-cardBg  rounded-full h-8 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 focus:outline-none"
+            className="sm:w-72 w-40 text-xs sm:text-sm relative bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-800 placeholder-gray-700 focus:outline-none"
             type="text"
             name="search gallery"
             id="searchGallery"

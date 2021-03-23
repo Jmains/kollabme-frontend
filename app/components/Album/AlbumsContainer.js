@@ -109,7 +109,7 @@ function AlbumsContainer(props) {
         />
       </Modal>
       <div className="flex justify-between items-center">
-        <h2 className="text-gray-300 font-bold text-base md:text-lg ml-2">Albums</h2>
+        <h2 className="text-black font-bold text-base md:text-lg ml-2">Albums</h2>
 
         {/* Search bar */}
         <div className="relative p-1 rounded-md focus:outline-none">
@@ -141,7 +141,7 @@ function AlbumsContainer(props) {
                 });
               }
             }}
-            className="text-xs sm:text-sm sm:w-72 w-40 relative z-40 bg-cardBg rounded-full h-8 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 focus:outline-none"
+            className="text-xs sm:text-sm sm:w-72 w-40 relative bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-700 focus:outline-none"
             type="text"
             name="search track"
             id="searchAlbum"

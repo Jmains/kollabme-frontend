@@ -67,7 +67,7 @@ function PublicPaintingsContainer(props) {
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-gray-300 font-bold text-base md:text-lg ml-2 focus:outline-none"
+          className="text-black font-bold text-base md:text-lg ml-2 focus:outline-none"
         >
           Gallery
         </h1>
@@ -96,7 +96,7 @@ function PublicPaintingsContainer(props) {
                 });
               }
             }}
-            className="sm:w-72 w-40 text-xs sm:text-sm relative z-40 bg-cardBg  rounded-full h-8 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 focus:outline-none"
+            className="sm:w-72 w-40 text-xs sm:text-sm relative z-40 bg-white  rounded-full h-8 pl-5 pr-10 py-1 text-gray-800 placeholder-gray-500 focus:outline-none"
             type="text"
             name="search gallery"
             id="searchGallery"
@@ -116,7 +116,7 @@ function PublicPaintingsContainer(props) {
 
       <div
         ref={galleryContainerRef}
-        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-flow-row mt-2 bg-pageBg rounded-lg"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-x-2 gap-y-2 grid-flow-row mt-2"
       >
         {paintings &&
           paintings.map((painting, i) => {

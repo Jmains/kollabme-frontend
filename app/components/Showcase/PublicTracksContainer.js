@@ -64,12 +64,12 @@ function PublicTracksContainer(props) {
 
   return (
     <div>
-      <div className="flex justify-between items-center mx-auto sm:px-5">
+      <div className="flex justify-between items-center mx-auto">
         <h1
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-gray-300 font-bold text-base md:text-lg ml-2 focus:outline-none"
+          className="text-black font-bold text-base md:text-lg focus:outline-none"
         >
           Tracks
         </h1>
@@ -126,7 +126,7 @@ function PublicTracksContainer(props) {
                 });
               }
             }}
-            className="text-xs sm:text-sm w-48 sm:w-72 relative z-40 bg-cardBg rounded-full h-8 pl-3 pr-8 py-1 text-gray-500 placeholder-gray-500 focus:outline-none"
+            className="text-xs sm:text-sm w-48 sm:w-72 relative z-40 bg-white rounded-full h-8 pl-3 pr-8 py-1 text-gray-900 placeholder-gray-500 focus:outline-none"
             type="text"
             name="search track"
             id="searchTrack"

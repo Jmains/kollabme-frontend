@@ -52,7 +52,7 @@ function UserSearchBar() {
         onChange={(e) => {
           setSearchQuery(e.target.value);
         }}
-        className="relative z-30 bg-cardBg text-xs md:text-base rounded-full h-10 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 w-full focus:outline-none"
+        className="relative z-30 bg-white text-xs md:text-base rounded-full h-10 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 w-full focus:outline-none"
         type="text"
         name="search"
         id="search"

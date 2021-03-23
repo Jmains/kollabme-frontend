@@ -5,7 +5,7 @@ function PublicTrackCard({ track }) {
   const [showPlayButton, setShowPlayButton] = useState(false);
   const imgRef = useRef(null);
   return (
-    <div className="bg-cardBg h-70 w-full max-w-64 rounded-lg shadow-md hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out cursor-pointer">
+    <div className="bg-white h-70 w-full max-w-64 rounded-lg shadow-md hover:bg-black hover:bg-opacity-50 transition duration-300 ease-in-out cursor-pointer">
       <div className="p-3 px-3 justify-center">
         <div
           onMouseOver={() => {

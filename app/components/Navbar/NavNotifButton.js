@@ -28,7 +28,7 @@ function NavNotifButton({ user }) {
           {notifications.length}
         </span>
       )}
-      <Bell className="h-5 w-5 sm:w-6 sm:h-6 fill-current text-teal-100" />
+      <Bell className="h-5 w-5 sm:w-6 sm:h-6 fill-current text-gray-500 hover:text-white" />
     </NavLink>
   );
 }

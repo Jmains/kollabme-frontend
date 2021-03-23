@@ -6,8 +6,8 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
     hideOpenModalButton = "mt-3 flex justify-end";
   }
   return (
-    <div className="bg-cardBg rounded-lg shadow-lg text-sm px-4 lg:px-3 py-3 text-teal-400 font-bold tracking-wider">
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+    <div className="bg-cardBg rounded-sm shadow-lg text-sm px-4 lg:px-3 py-3 text-gray-50 font-bold tracking-wider">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div className="">
           <p className="md:text-sm text-sm">Main Platforms</p>
           {profileData.mainPlatforms &&
@@ -23,7 +23,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">Genres</p>
           {profileData.genres &&
@@ -39,7 +39,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">Business Email</p>
 
@@ -53,7 +53,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">Name</p>
           {profileData.firstName && profileData.lastName && (
@@ -62,7 +62,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">Age</p>
           <p className="text-gray-400 font-medium md:text-sm text-xs mt-1">
@@ -71,7 +71,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">City</p>
           <p className="text-gray-400 font-medium md:text-sm text-xs mt-1">
@@ -80,7 +80,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">State</p>
           <p className="text-gray-400 font-medium md:text-sm text-xs mt-1">
@@ -89,7 +89,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div>
           <p className="md:text-sm text-sm">Gender</p>
           <p className="text-gray-400 font-medium md:text-sm text-xs mt-1">
@@ -98,7 +98,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div className="">
           <p className="md:text-sm text-sm">Inspiration</p>
           <p className="text-gray-400 font-medium mt-2 md:text-sm text-xs">
@@ -107,7 +107,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div className="">
           <p className="md:text-sm text-sm">Biography</p>
           <p className="text-gray-400 font-medium mt-2 md:text-sm text-xs">
@@ -116,7 +116,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className="shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className="shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div className="">
           <p className="md:text-sm text-sm">Current Favorite Song</p>
           <p className="text-gray-400 font-medium mt-2 md:text-sm text-xs">
@@ -125,7 +125,7 @@ function ProfileInfo({ user, profileData, setModalIsOpen }) {
         </div>
       </div>
 
-      <div className=" shadow-md rounded-md p-2 bg-black bg-opacity-25">
+      <div className=" shadow-md rounded-sm p-2 bg-black bg-opacity-25">
         <div className="">
           <p className="md:text-sm text-sm">Favorite Childhood Song</p>
           <p className="text-gray-400 font-medium mt-2 md:text-sm text-xs">

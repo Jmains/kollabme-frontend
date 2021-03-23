@@ -114,12 +114,12 @@ function TracksContainer(props) {
         />
       </Modal>
 
-      <div className="flex justify-between items-center mx-auto max-w-screen px-10 rounded-lg">
+      <div className="flex justify-between items-center mx-auto rounded-lg">
         <h1
           tabIndex="0"
           id="title"
           ref={titleRef}
-          className="text-gray-300 font-bold text-base md:text-lg ml-2 focus:outline-none focus:shadow-outline"
+          className="text-black font-bold text-base md:text-lg ml-2 focus:outline-none focus:shadow-outline"
         >
           Tracks
         </h1>
@@ -148,7 +148,7 @@ function TracksContainer(props) {
                 });
               }
             }}
-            className="text-xs sm:text-sm sm:w-72 w-40 relative z-40 bg-cardBg rounded-full h-8 pl-5 pr-10 py-1 text-gray-500 placeholder-gray-500 focus:outline-none"
+            className="text-xs sm:text-sm sm:w-72 w-40 relative bg-white rounded-full h-8 pl-5 pr-10 py-1 text-gray-900 placeholder-gray-700 focus:outline-none"
             type="text"
             name="search track"
             id="searchTrack"

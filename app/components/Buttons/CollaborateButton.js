@@ -56,7 +56,7 @@ function CollaborateButton({ user, userToCollab }) {
             setCollabPending(true);
           }}
           aria-label="collaborate"
-          className="ml-3 py-1 px-3 text-xs md:text-sm font-semibold bg-gradient-to-r from-black to-gray-900 text-teal-400 hover:text-gray-900 hover:bg-gradient-to-r hover:from-teal-400 hover:to-teal-700 hover:bg-opacity-25 rounded-full tracking-wide shadow-md border-b border-gray-700 transition ease-out duration-500"
+          className="ml-3 py-1 px-3 text-xs md:text-sm font-semibold bg-black text-white hover:text-gray-900 hover:bg-white rounded-full tracking-wide shadow-md border-b border-gray-700 transition ease-out duration-500"
         >
           Collaborate
         </button>

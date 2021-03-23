@@ -1,5 +1,5 @@
 {
-  "name": "intreecate",
+  "name": "kollabme",
   "version": "1.0.0",
   "description": "A professional platform to develop, connect, and discover artists, musicians, producers, audio engineers, actors, painters, etc.",
   "main": "index.js",
@@ -15,9 +15,9 @@
   "author": "Supachai Jackson Main",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jmains/intreecate/issues"
+    "url": "https://github.com/Jmains/kollabme-frontend/issues"
   },
-  "homepage": "https://github.com/Jmains/intreecate#readme",
+  "homepage": "https://github.com/Jmains/kollabme#readme",
   "dependencies": {
     "@apollo/client": "^3.1.3",
     "@babel/core": "^7.10.3",
@@ -41,6 +41,7 @@
     "graphql": "^15.2.0",
     "js-cookie": "^2.2.1",
     "jwt-decode": "^2.2.0",
+    "lozad": "^1.16.0",
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-avatar-editor": "^11.0.9",
@@ -60,7 +61,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^10.2.5",
     "css-loader": "^3.6.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "file-loader": "^6.1.0",
@@ -68,11 +69,12 @@
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.2.8",
     "postcss-cli": "^7.1.1",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^5.2.0",
     "style-loader": "^1.2.1",
-    "tailwindcss": "^1.9.1",
-    "webpack": "^4.44.1",
+    "tailwindcss": "^2.0.4",
+    "webpack": "^5.27.2",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^5.1.4"
   }

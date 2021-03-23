@@ -249,7 +249,7 @@ function PostForm({ user }) {
           onSubmit={(e) => {
             submitPost(e);
           }}
-          className="my-2 p-4 shadow-lg rounded-md bg-cardBg bg-opacity-25"
+          className="my-2 p-4 shadow-lg rounded-sm bg-white"
         >
           <div className="mb-3">
             {/* Post body container */}
@@ -266,7 +266,7 @@ function PostForm({ user }) {
               style={formStyle}
               value={body}
               onChange={(e) => setBody(e.target.value)}
-              className="shadow mb-3 text-sm sm:text-base border-gray-200 h-16 rounded w-full py-2 px-3 placeholder-gray-500 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow mb-3 text-sm sm:text-base border-gray-200 h-24 rounded w-full py-2 px-3 placeholder-gray-500 text-gray-900 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-gray-600"
               required
               placeholder="What's your latest creation?..."
               aria-label="body"
@@ -464,7 +464,7 @@ function PostForm({ user }) {
 
             <button
               type="submit"
-              className="absolute font-bold h-8 inset-y-0 right-0 px-4 text-base md:text-lg md:w-20 shadow-md rounded-full bg-gradient-to-r from-teal-400 to-teal-700 hover:bg-gradient-to-r hover:from-teal-300 hover:to-teal-600 border-b border-gray-700 tracking-wide focus:outline-none transition ease-in-out duration-500"
+              className="absolute font-bold h-8 inset-y-0 right-0 px-4 text-base md:text-lg md:w-20 shadow-md rounded-full bg-black text-white hover:bg-opacity-70 tracking-wide focus:outline-none transition ease-in-out duration-200"
             >
               Post
             </button>

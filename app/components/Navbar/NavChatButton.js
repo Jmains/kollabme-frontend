@@ -18,7 +18,7 @@ function NavChatButton({ user }) {
           {userInfo.chats.length}
         </h2>
       )}
-      <Message className="h-5 w-5 sm:w-6 sm:h-6 fill-current text-teal-100" />
+      <Message className="h-5 w-5 sm:w-6 sm:h-6 fill-current text-gray-500 hover:text-white" />
     </>
   );
 }

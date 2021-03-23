@@ -26,9 +26,9 @@ import UniAudioPlayer from "./components/MediaPlayers/UniAudioPlayer";
  *  *********************************/
 
 // const uri = "http://localhost:8080/graphql";
+// const expressUri = "http://localhost:8080/api";
 const uri = "https://kollab-me.herokuapp.com/graphql";
 const expressUri = "https://kollab-me.herokuapp.com/api";
-// const expressUri = "http://localhost:8080/api";
 
 function getAccessToken() {
   return localStorage.getItem("accessToken");
