@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./index.css";
+import "react-image-lightbox/style.css";
 
 import AuthRoute from "./utils/AuthRoute";
 // Components
@@ -54,7 +55,7 @@ Modal.setAppElement("#app");
 //   },
 // };
 
-// TODO: Use environment variables
+// TODO: Use environment variables!!!!!!!!!!!
 const uri = "https://www.kollabme.app/api";
 // const uri = "http://localhost:8080/api";
 

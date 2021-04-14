@@ -502,7 +502,7 @@ function Profile(props) {
           )}
           {showLikes && (
             <div className="mx-auto shadow-lg rounded-lg max-w-lg md:max-w-2xl lg:ml-10">
-              <h1 className="text-teal-400 bg-cardBg h-16 text-center my-auto rounded-lg">
+              <h1 className="text-gray-300 bg-cardBg h-16 pt-5 text-center my-auto rounded-lg">
                 Viewing user likes is under construction...
               </h1>
             </div>

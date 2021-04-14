@@ -1,4 +1,3 @@
-import "react-image-lightbox/style.css";
 import React, { useEffect, useState } from "react";
 import LockPaintingButton from "../Buttons/LockPaintingButton";
 import { useMutation, gql } from "@apollo/client";
@@ -156,12 +155,12 @@ function GalleryCard({ painting, user, profileUsername, searchQuery, isPublic })
             />
           </button>
 
-          {imgModalOpen && (
+          {/* {imgModalOpen && (
             <Lightbox
               mainSrc={painting.imageUrl}
               onCloseRequest={() => setImgModalOpen(false)}
             />
-          )}
+          )} */}
           <div className="relative">
             {painting.username && user && painting.username === user.username && (
               <div className="absolute top-0 left-0 text-white md:ml-6 ml-10 mt-2">

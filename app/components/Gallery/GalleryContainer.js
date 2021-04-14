@@ -181,7 +181,7 @@ function GalleryContainer(props) {
 
       <div
         ref={galleryContainerRef}
-        className="grid md:grid-cols-2 grid-cols-1 grid-flow-row mt-2 bg-pageBg rounded-lg"
+        className="grid md:grid-cols-2 grid-cols-1 grid-flow-row mt-2 rounded-lg"
       >
         {paintings &&
           paintings.map((painting) => {

@@ -22,9 +22,8 @@ import jwtDecode from "jwt-decode";
 import UniAudioPlayer from "./components/MediaPlayers/UniAudioPlayer";
 
 /************************************
- * //TODO: Use environment variables!
+ * //TODO: Use environment variables!!!!!!!!!!!!!!!!!!
  *  *********************************/
-
 // const uri = "http://localhost:8080/graphql";
 // const expressUri = "http://localhost:8080/api";
 const uri = "https://www.kollabme.app/graphql";

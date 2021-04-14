@@ -204,12 +204,12 @@ function PostCard({ post }) {
                 </div>
               )}
 
-              {imgModalOpen && (
+              {/* {imgModalOpen && (
                 <Lightbox
                   mainSrc={post.imageUrl}
                   onCloseRequest={() => setImgModalOpen(false)}
                 />
-              )}
+              )} */}
               {/* End Image container  */}
 
               {/* Video container */}

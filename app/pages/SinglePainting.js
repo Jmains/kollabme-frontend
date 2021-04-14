@@ -47,7 +47,7 @@ function SinglePainting() {
   return (
     <>
       {painting && (
-        <div className="sm:mt-40 mt-64 relative bg-cardBg max-w-2xl mx-auto text-center content-center my-1 rounded-lg hover:bg-black hover:bg-opacity-50 px-2 py-2 shadow-md transition duration-300 ease-in-out">
+        <div className="sm:mt-40 mt-64 relative bg-cardBg max-w-2xl mx-auto text-center content-center my-1 rounded-lg hover:bg-opacity-50 px-2 py-2 shadow-md transition duration-300 ease-in-out">
           <button
             onClick={() => {
               setImgModalOpen(true);
@@ -60,12 +60,12 @@ function SinglePainting() {
             />
           </button>
 
-          {imgModalOpen && (
+          {/* {imgModalOpen && (
             <Lightbox
               mainSrc={painting.imageUrl}
               onCloseRequest={() => setImgModalOpen(false)}
             />
-          )}
+          )} */}
 
           <div className="relative">
             {username && user && username === user.username && (
@@ -79,24 +79,24 @@ function SinglePainting() {
               </div>
             </div>
             <Link to={`/${username}/gallery/${painting.id}`}>
-              <h1 className="text-gray-300 text-xs sm:text-sm md:text-base font-bold mt-2 cursor-pointer hover:underline w-40 mx-auto truncate">
+              <h1 className="text-gray-200 text-xs sm:text-sm md:text-base font-bold mt-2 cursor-pointer hover:underline w-40 mx-auto truncate">
                 {painting.title}
               </h1>
-              <p className="text-gray-500 text-xs sm:text-sm font-thin cursor-pointer w-40 sm:w-72 mx-auto h-auto">
+              <p className="text-gray-300 text-xs sm:text-sm font-light cursor-pointer w-40 sm:w-72 mx-auto h-auto">
                 {painting.description}
               </p>
             </Link>
             <Link to={`/${painting.username}`}>
               <div className="flex justify-center items-center mx-auto w-40 mt-3">
                 <svg
-                  className="fill-current text-teal-400 -ml-3 h-6 w-6"
+                  className="fill-current text-gray-400 -ml-3 h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
                   <path d="M0 0h24v24H0z" fill="none" />
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
-                <p className="text-teal-400 text-xs sm:text-sm cursor-pointer ml-1 truncate">
+                <p className="text-gray-400 text-xs sm:text-sm cursor-pointer ml-1 truncate">
                   {painting.author.displayName}
                 </p>
               </div>
