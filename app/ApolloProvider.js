@@ -27,8 +27,8 @@ import UniAudioPlayer from "./components/MediaPlayers/UniAudioPlayer";
 
 // const uri = "http://localhost:8080/graphql";
 // const expressUri = "http://localhost:8080/api";
-const uri = "https://kollabme.app/graphql";
-const expressUri = "https://kollabme.app/api";
+const uri = "https://www.kollabme.app/graphql";
+const expressUri = "https://www.kollabme.app/api";
 
 function getAccessToken() {
   return localStorage.getItem("accessToken");

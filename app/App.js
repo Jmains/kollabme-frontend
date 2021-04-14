@@ -55,7 +55,7 @@ Modal.setAppElement("#app");
 // };
 
 // TODO: Use environment variables
-const uri = "https://kollabme.app/api";
+const uri = "https://www.kollabme.app/api";
 // const uri = "http://localhost:8080/api";
 
 function App() {
