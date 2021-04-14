@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "./index.css";
 
 import AuthRoute from "./utils/AuthRoute";
 // Components
@@ -34,30 +35,27 @@ import Modal from "react-modal";
 
 Modal.setAppElement("#app");
 
-const modalStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    marginTop: "3rem",
-    transform: "translate(-50%, -50%)",
-    background: "rgba(0,0,0,0)",
-    border: "none",
-  },
-  overlay: {
-    zIndex: 999,
-    overflowY: "scroll",
-    background: "rgba(0,0,0,0.6)",
-  },
-};
-
-import "./index.css";
+// const modalStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     right: "auto",
+//     bottom: "auto",
+//     marginRight: "-50%",
+//     marginTop: "3rem",
+//     transform: "translate(-50%, -50%)",
+//     background: "rgba(0,0,0,0)",
+//     border: "none",
+//   },
+//   overlay: {
+//     zIndex: 999,
+//     overflowY: "scroll",
+//     background: "rgba(0,0,0,0.6)",
+//   },
+// };
 
 // TODO: Use environment variables
-
-const uri = "https://kollab-me.herokuapp.com/api";
+const uri = "https://kollabme.app/api";
 // const uri = "http://localhost:8080/api";
 
 function App() {
